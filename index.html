@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="top">
+      <div>
+        <div class="eyebrow">Tugas Rutin 6 · Pemrograman Web</div>
+        <h1>🧠 Interactive Quiz</h1>
+      </div>
+      <button type="button" id="themeBtn" class="theme-btn" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <div class="quiz-content">
+      <!-- High Score, tampil sejak awal -->
+      <div class="highscore-badge">🏆 High Score: <span id="highScoreLive">0%</span></div>
+
+      <!-- Progress -->
+      <div class="progress-row">
+        <span id="progress">Soal 1/5</span>
+        <span id="timer">⏱ 15s</span>
+      </div>
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+
+      <!-- Soal (dirender oleh JS) -->
+      <h2 id="question"></h2>
+
+      <!-- Pilihan jawaban -->
+      <div id="options" class="options-grid"></div>
+
+      <!-- Tombol next -->
+      <button type="button" id="nextBtn" class="next-btn hidden">Lanjut →</button>
+    </div>
+
+    <!-- Hasil akhir -->
+    <div id="result" class="result hidden">
+      <p class="result-label">Quiz selesai</p>
+      <h2>Skor: <span id="score"></span></h2>
+      <p class="highscore-line">High Score: <span id="highScore"></span></p>
+      <button type="button" id="restartBtn" class="restart-btn">🔄 Ulangi Quiz</button>
+    </div>
+
+    <footer>Pilihan tersimpan otomatis · High score disimpan lokal di browser ini</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
